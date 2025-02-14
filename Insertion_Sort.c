@@ -39,10 +39,6 @@ int Insertion_Sort(int a[],int n){
             i--;
         }
         a[i+1]=temp;
-        for(int i=0;i<n;i++){
-            printf("%d ",a[i]);
-        }
-        printf("\n");
     }
 }
 int main(){
