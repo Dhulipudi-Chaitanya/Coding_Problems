@@ -23,11 +23,8 @@ void Merge(int a[],int n, int low,int mid,int high){
         B[k]=a[j];
         k++;j++;
     }
-    // k=0 because to k is already increment and to make it zero
-    k=0;
     for(int i=low;i<=high;i++){
-        a[i]=B[k];
-        k++;
+        a[i]=B[i];
     }
 }
 
