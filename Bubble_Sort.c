@@ -46,12 +46,12 @@ void Bubblesort(int a[], int n,int i,int j){
         return;
     }
     if(a[j] >a[j+1] && j< n-1){
-        int temp=a[i];
-        a[i]=a[j];
-        a[j]=temp;
+        int temp=a[j];
+        a[j]=a[j+1];
+        a[j+1]=temp;
     }
-    Bubblesort(a,n,i,j+1);
-    Bubblesort(a,n,i+1,0);   
+    Bubblesort(a,n,i,j+1); // for inner loop recursive call
+    Bubblesort(a,n,i+1,0);  // for outer loop recursive call
 }
 int main(){
     int n;
@@ -60,7 +60,7 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d",&a[i]);
     }
-    int i=0,j=1;
+    int i=0,j=0;
     Bubblesort(a,n,i,j);//calling_function
     for(int i=0;i<n;i++){
         printf("%d ",a[i]);
